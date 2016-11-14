@@ -6,12 +6,21 @@ var path = require("path");//add the path module
 var port= 3000;
 
 
+
 app.get("/", function(req, res){
-  res.send("Server functioniert!!");
-});//Send data to the Server
+  var fileName = path.join(__dirname, "index.html");
+  res.sendFile(fileName, function(err){
+    if(err){
+    console.log("failed");
+    res.status(err.status).end();
+  } else {
+    console.log("Sent:", fileName);
+  }
 
+  });
 
+});//Routing http get request to a certain path with a callback function
 
 app.listen(port, function(){
   console.log("Listening on Port: "+port);
-});//Set the app to listen to the port
+});//Start a socket. Is identical to "http.Server.listen". Returns a sever object!
