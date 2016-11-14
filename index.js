@@ -1,5 +1,5 @@
 var express = require ("express");//add the express module
-var app = express();
+var app = express();//start the server
 var moment = require("moment");//add the moment module for simplified time manipulation and validation
 var fs = require("fs");//add the fs module
 var path = require("path");//add the path module
@@ -23,7 +23,7 @@ app.get("/test", function(req, res){
 app.get("/:datestring", function(req, res){
   var timeStamp;
   if(/^\d{8,}$/.test(req.params.datestring)){
-    timeStamp=moment(req.params.datestring, "X");//if the input
+    timeStamp=moment(req.params.datestring, "X");//if the input starts with at least 8 decimal numbers store it in unix format
   } else {
     timeStamp=moment(req.params.datestring, "MMMM D, YYYY");//else store the input in the readable format
   }
