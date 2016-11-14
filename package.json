@@ -1,0 +1,25 @@
+{
+  "name": "timestampmicroservice",
+  "version": "1.0.0",
+  "description": "fcc challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DDCreationStudios/timestamp-api.git"
+  },
+  "keywords": [
+    "fcc",
+    "api",
+    "backend",
+    "timestamp"
+  ],
+  "author": "Daniel Deutsch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DDCreationStudios/timestamp-api/issues"
+  },
+  "homepage": "https://github.com/DDCreationStudios/timestamp-api#readme"
+}
