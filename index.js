@@ -3,7 +3,7 @@ var app = express();//start the server
 var moment = require("moment");//add the moment module for simplified time manipulation and validation
 var fs = require("fs");//add the fs module
 var path = require("path");//add the path module
-var port= 3000;
+var port= process.env.PORT || 3000;
 
 app.get("/", function(req, res){
   var fileName = path.join(__dirname, "index.html");
